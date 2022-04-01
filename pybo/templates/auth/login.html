@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container my-3">
+<div class="container my-3" style="text-align:center;">
+    <img src="../../static/img/login.png" alt="My Image" style="width:30%;">
     <form method="post" class="post-form">
         {{ form.csrf_token }}
         {% include "form_errors.html" %}
-        <div class="form-group">
+        <div class="form-group" style="text-align:center;">
+            <div style="height:30px;"></div>
             <label for="username">사용자 이름</label>
-            <input type="text" class="form-control" name="username" id="username"
-                   value="{{ form.username.data or '' }}">
+            <input type="text" class="form-control" name="username" id="username" style="width:50%; margin-left:25%;"
+                value="{{ form.username.data or '' }}">
         </div>
-        <div class="form-group">
+        <div class="form-group" style="text-align:center;">
             <label for="password">비밀번호</label>
-            <input type="password" class="form-control" name="password" id="password"
-                   value="{{ form.password.data or '' }}">
+            <input type="password" class="form-control" name="password" id="password" style="width:50%; margin-left:25%;"
+                value="{{ form.password.data or '' }}">
         </div>
-        <button type="submit" class="btn btn-primary">로그인</button>
+        <div style="height:50px;"></div>
+        <button type="submit" class="custom-btn btn-8" style="width:50%;"><span>로그인</span></button>
     </form>
 </div>
 {% endblock %}

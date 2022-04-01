@@ -1,5 +1,6 @@
-from flask import Blueprint, url_for
+from flask import Blueprint, url_for, g
 from werkzeug.utils import redirect
+from pybo.views.auth_views import login_required
 
 bp = Blueprint('main', __name__, url_prefix='/')
 
@@ -8,5 +9,9 @@ def hello_pybo():
 	return 'hello, pybo!@#'
 
 @bp.route('/')
+@login_required
 def index():
-	return redirect(url_for('question._list'))
+	if g.user is None:
+		return redirect(url_for('auth.login'))
+	else:
+		return redirect(url_for('question._list'))
