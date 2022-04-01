@@ -16,6 +16,11 @@
     font-family: GowunBatang-Bold;
 }
 
+.comment {
+  border-top:dotted 1px #ddd;
+  font-size:0.7em;
+}
+
 .custom-btn {
     width: 130px;
     height: 40px;
