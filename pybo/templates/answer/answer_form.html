@@ -12,3 +12,11 @@
     </form>
 </div>
 {% endblock %}
+{% endblock %}
+{% block script %}
+<script>
+    const mde = new SimpleMDE({
+        element: document.getElementById("mde")
+    });
+</script>
+{% endblock %}
