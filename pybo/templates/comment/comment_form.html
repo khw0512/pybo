@@ -7,10 +7,16 @@
         {% include "form_errors.html" %}
         <div class="form-group">
             <label for="content">댓글내용</label>
-            <textarea class="form-control" name="content" id="content"
-                      rows="3">{{ form.content.data or '' }}</textarea>
+            <textarea name="content" id="mde" rows="3">{{ form.content.data or '' }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>
 </div>
+{% endblock %}
+{% block script %}
+<script>
+    const mde = new SimpleMDE({
+        element: document.getElementById("mde")
+    });
+</script>
 {% endblock %}

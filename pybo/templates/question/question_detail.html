@@ -151,8 +151,7 @@
         {% endfor %}
         <!-- 오류표시 End -->
         <div class="form-group">
-            <textarea {% if not g.user %}disabled{% endif %} name="content" id="content" class="form-control"
-                rows="10"></textarea>
+            <textarea {% if not g.user %}disabled{% endif %} name="content" id="mde" rows="10"></textarea>
         </div>
         <input type="submit" value="답변등록" class="btn btn-primary">
     </form>
@@ -171,6 +170,11 @@
                 location.href = $(this).data('uri');
             }
         });
+    });
+</script>
+<script>
+    const mde = new SimpleMDE({
+        element: document.getElementById("mde")
     });
 </script>
 {% endblock %}
