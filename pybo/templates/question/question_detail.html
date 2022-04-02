@@ -150,7 +150,7 @@
         {% endfor %}
         <!-- 오류표시 End -->
         <div class="form-group">
-            <textarea {% if not g.user %}disabled{% endif %} name="content" id="mde" rows="10"></textarea>
+            <textarea {% if not g.user %}disabled{% endif %} name="content" class="form-control" id="mde" rows="10"></textarea>
         </div>
         <input type="submit" value="답변등록" class="btn button-main">
     </form>
