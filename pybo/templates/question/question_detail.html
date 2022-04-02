@@ -65,7 +65,7 @@
                     {% endif %}
                     <div>
                         <a href="{{ url_for('comment.create_question', question_id=question.id) }}"
-                            class="small"><small>댓글 추가 ..</small></a>
+                            class="small add-comment"><small>댓글 추가</small></a>
                     </div>
                     <!-- 질문 댓글 End -->
                 </div>
@@ -132,8 +132,7 @@
                     </div>
                     {% endif %}
                     <div>
-                        <a href="{{ url_for('comment.create_answer', answer_id=answer.id) }}" class="small"><small>댓글 추가
-                                ..</small></a>
+                        <a href="{{ url_for('comment.create_answer', answer_id=answer.id) }}" class="small add-comment"><small>댓글 추가</small></a>
                     </div>
                     <!-- 답변 댓글 End -->
                 </div>
@@ -153,7 +152,7 @@
         <div class="form-group">
             <textarea {% if not g.user %}disabled{% endif %} name="content" id="mde" rows="10"></textarea>
         </div>
-        <input type="submit" value="답변등록" class="btn btn-primary">
+        <input type="submit" value="답변등록" class="btn button-main">
     </form>
 </div>
 {% endblock %}

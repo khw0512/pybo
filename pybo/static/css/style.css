@@ -21,6 +21,18 @@
   font-size:0.7em;
 }
 
+.add-comment {
+  color:mediumblue;
+  border: solid 1px grey;
+  border-radius: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.add-comment:hover {
+  text-decoration-line:none;
+}
+
 .custom-btn {
     width: 130px;
     height: 40px;
@@ -112,4 +124,13 @@
   }
   .btn-8 span:hover:after {
     width: 100%;
+  }
+
+  .button-main{
+    background-color:#343a40;
+    color:white;
+  }
+  .button-main:hover{
+    background-color: black;
+    color: white;
   }
