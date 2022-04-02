@@ -6,7 +6,7 @@
         {% include "form_errors.html" %}
         <div class="form-group">
             <label for="content">답변내용</label>
-            <textarea class="form-control" name="content" class="form-control" id="content" rows="10">{{ form.content.data or '' }}</textarea>
+            <textarea class="form-control" name="content" class="form-control" id="mde" rows="10">{{ form.content.data or '' }}</textarea>
         </div>
         <button type="submit" class="btn button-main">저장하기</button>
     </form>
